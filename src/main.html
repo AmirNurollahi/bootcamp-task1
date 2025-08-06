@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/style/style.css" />
-    <link rel="stylesheet" href="/style/fonts.css">
+    <link rel="stylesheet" href="/style/fonts.css" />
   </head>
 
   <body>
@@ -46,11 +46,12 @@
               </a>
             </li>
             <li class="sidebar__menu-item_list">
-              <a href="#">
+              <a href="#" class="item__list--message">
                 <svg class="list__icon">
                   <use xlink:href="/assets/images/svg-sprite.svg#alarm"></use>
                 </svg>
                 <p>پیام ها</p>
+                <span>۳</span>
               </a>
             </li>
             <li class="sidebar__menu-item_list">
@@ -75,154 +76,153 @@
 
       <div class="my_orders">
         <div class="my__orders_title">
-            <svg class="my__orders_icons">
-          <use xlink:href="/assets/images/svg-sprite.svg#chevron-right"></use>
-        </svg>
-        <h3>سفارش های من</h3>
+          <svg class="my__orders_icons">
+            <use xlink:href="/assets/images/svg-sprite.svg#chevron-right"></use>
+          </svg>
+          <h3>سفارش های من</h3>
         </div>
-        <div class="boxes">
-            <div class="my__orders_items__boxes active">
-          <div class="my__orders_items__boxes_icon">
-            <img src="/assets/images/Time Circle.svg" alt="" />
+        <div class="my_orders__boxes">
+          <div class="my__orders_items__boxes active">
+            <div class="my__orders_items__boxes_icon">
+              <img src="/assets/images/Time Circle.svg" alt="" />
+            </div>
+            <div class="my__orders_items__boxes_status">
+              <p>در حال پردازش</p>
+              <p>
+                <span>۵</span>
+                سفارش
+              </p>
+            </div>
           </div>
-          <div class="my__orders_items__boxes_status">
-            <p>در حال پردازش</p>
-            <p>
-              <span>۵</span>
-              سفارش
-            </p>
+
+          <div class="my__orders_items__boxes">
+            <div class="my__orders_items__boxes_icon">
+              <img src="/assets/images/Check Circle.svg" alt="" />
+            </div>
+            <div class="my__orders_items__boxes_status">
+              <p>تحویل شده</p>
+              <p>
+                <span>۴</span>
+                سفارش
+              </p>
+            </div>
+          </div>
+
+          <div class="my__orders_items__boxes">
+            <div class="my__orders_items__boxes_icon">
+              <img src="/assets/images/circle-u-turn-left-up.svg" alt="" />
+            </div>
+            <div class="my__orders_items__boxes_status">
+              <p>مرجوعی</p>
+              <p>
+                <span>۲</span>
+                سفارش
+              </p>
+            </div>
+          </div>
+
+          <div class="my__orders_items__boxes">
+            <div class="my__orders_items__boxes_icon">
+              <img src="/assets/images/Close Circle.svg" alt="" />
+            </div>
+            <div class="my__orders_items__boxes_status">
+              <p>لغو شده</p>
+              <p>
+                <span>۳</span>
+                سفارش
+              </p>
+            </div>
           </div>
         </div>
 
-         <div class="my__orders_items__boxes">
-              <div class="my__orders_items__boxes_icon">
-                <img src="/assets/images/Check Circle.svg" alt="">
-              </div>
-              <div class="my__orders_items__boxes_status">
-                <p>تحویل شده</p>
-                <p>
-                  <span>۴</span>
-                  سفارش
-                </p>
-              </div>
+        <div class="my__orders_loading_items">
+          <div class="my__orders_loading_items item-one">
+            <div class="my__orders_loading_items box-color">
+              <img src="/assets/images/Time Circle.svg" alt="" />
+              <p>در حال پردازش</p>
             </div>
-
-            <div class="my__orders_items__boxes">
-              <div class="my__orders_items__boxes_icon">
-                <img src="/assets/images/Check Circle.svg" alt="">
-              </div>
-              <div class="my__orders_items__boxes_status">
-                <p>تحویل شده</p>
-                <p>
-                  <span>۴</span>
-                  سفارش
-                </p>
-              </div>
-            </div>
-
-            <div class="my__orders_items__boxes">
-              <div class="my__orders_items__boxes_icon">
-                <img src="/assets/images/circle-u-turn-left-up.svg" alt="">
-              </div>
-              <div class="my__orders_items__boxes_status">
-                <p>مرجوعی</p>
-                <p>
-                  <span>۲</span>
-                  سفارش
-                </p>
-              </div>
-            </div>
-
-            <div class="my__orders_items__boxes">
-              <div class="my__orders_items__boxes_icon">
-                <img src="/assets/images/Close Circle.svg" alt="">
-              </div>
-              <div class="my__orders_items__boxes_status">
-                <p>لغو شده</p>
-                <p>
-                  <span>۳</span>
-                  سفارش
-                </p>
-              </div>
-            </div>
-        </div>
-
-            <div class="my__orders_loading_items">
-            <div class="my__orders_loading_items item-one">
-              <div class="my__orders_loading_items box-color">
-                <img src="/assets/images/Time Circle.svg" alt="">
-                <p>در حال پردازش</p>
-              </div>
-              <div class="my__orders_loading_items details-orders">
-                <div class="my__orders_loading_items date_code">
+            <div class="my__orders_loading_items details-orders">
+              <div class="my__orders_loading_items date_code">
+                <div class="date_code date">
                   <span>تاریخ تحویل سفارش :</span>
                   <span>۱۴۰۳/۰۵/۰۷</span>
                 </div>
-                <div class="my__orders_loading_items price">
-                  <span>۱,۵۵۰,۰۰۰</span>
-                  <span>تومان</span>
+                <div class="date_code code">
+                  <span>کد سفارش : </span>
+                  <span>۲۱۶۵۴۴۹</span>
                 </div>
               </div>
-
-              <div class="my__orders_loading_items preview-orders">
-                <div class="my__orders_loading_items image_orders">
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order1.png" alt="" />
-                    <span>1</span>
-                  </div>
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order2.png" alt="" />
-                    <span>2</span>
-                  </div>
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order3.png" alt="" />
-                    <span>1</span>
-                  </div>
-                </div>
-                <div class="my__orders_loading_items btn">
-                  <a href="#">جزئیات سفارش</a>
-                  <img src="/assets/images/Arrow Icon.svg" alt="">
-                </div>
+              <div class="my__orders_loading_items price">
+                <span>۱,۵۵۰,۰۰۰</span>
+                <span>تومان</span>
               </div>
             </div>
-            <div class="my__orders_loading_items item-two">
-              <div class="my__orders_loading_items box-color">
-                <img src="/assets/images/Time Circle.svg" alt="">
-                <p>در حال پردازش</p>
-              </div>
-              <div class="my__orders_loading_items details-orders">
-                <div class="my__orders_loading_items date_code">
-                  <span>تاریخ تحویل سفارش :</span>
-                  <span>۱۴۰۳/۰۵/۰۷</span>
-                </div>
-                <div class="my__orders_loading_items price">
-                  <span>۱,۵۵۰,۰۰۰</span>
-                  <span>تومان</span>
-                </div>
-              </div>
 
-              <div class="my__orders_loading_items preview-orders">
-                <div class="my__orders_loading_items image_orders">
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order1.png" alt="" />
-                    <span>1</span>
-                  </div>
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order2.png" alt="" />
-                    <span>2</span>
-                  </div>
-                  <div class="img_orders">
-                    <img src="/assets/images/orders/order3.png" alt="" />
-                    <span>1</span>
-                  </div>
+            <div class="my__orders_loading_items preview-orders">
+              <div class="my__orders_loading_items image_orders">
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order1.png" alt="" />
+                  <span>1</span>
                 </div>
-                <div class="my__orders_loading_items btn">
-                  <a href="#">جزئیات سفارش</a>
-                  <img src="/assets/images/Arrow Icon.svg" alt="">
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order2.png" alt="" />
+                  <span>2</span>
                 </div>
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order3.png" alt="" />
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="my__orders_loading_items btn">
+                <a href="#">جزئیات سفارش</a>
+                <img src="/assets/images/Arrow Icon.svg" alt="" />
               </div>
             </div>
           </div>
+          <div class="my__orders_loading_items item-two">
+            <div class="my__orders_loading_items box-color">
+              <img src="/assets/images/Time Circle.svg" alt="" />
+              <p>در حال پردازش</p>
+            </div>
+            <div class="my__orders_loading_items details-orders">
+              <div class="my__orders_loading_items date_code">
+                <div class="date_code date">
+                  <span>تاریخ تحویل سفارش :</span>
+                  <span>۱۴۰۳/۰۵/۰۷</span>
+                </div>
+                <div class="date_code code">
+                  <span>کد سفارش : </span>
+                  <span>۲۱۶۵۴۴۹</span>
+                </div>
+              </div>
+              <div class="my__orders_loading_items price">
+                <span>۱,۵۵۰,۰۰۰</span>
+                <span>تومان</span>
+              </div>
+            </div>
+
+            <div class="my__orders_loading_items preview-orders">
+              <div class="my__orders_loading_items image_orders">
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order1.png" alt="" />
+                  <span>1</span>
+                </div>
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order2.png" alt="" />
+                  <span>2</span>
+                </div>
+                <div class="img_orders">
+                  <img src="/assets/images/orders/order3.png" alt="" />
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="my__orders_loading_items btn">
+                <a href="#">جزئیات سفارش</a>
+                <img src="/assets/images/Arrow Icon.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

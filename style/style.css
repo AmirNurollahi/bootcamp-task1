@@ -30,15 +30,19 @@ body{
 /* main */
 .main{
     /* display: flex; */
+    width: 100%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
     font-size: 1.4rem;
     margin-bottom: 2rem;
 }
 
 .sidebar{
     width: 100%;
-    /* max-width: 50%; */
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     background-color: var(--color-card);
     padding: 2rem;
     border-radius: 2rem;
@@ -126,6 +130,18 @@ body{
     color: #000;
 }
 
+.item__list--message span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 25px;
+    height: 25%;
+    background-color: #cc312d;
+    color: #fff;
+    margin-right: auto;
+}
+
 .box{
     width: 100%;
     height: auto;
@@ -134,11 +150,10 @@ body{
 
 .my__orders_title{
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0;
+    margin: 3rem 1.5rem 0 0;
     border-bottom: 1.5px solid #e6e6e6;
     padding-bottom: 2rem;
 }
@@ -154,6 +169,10 @@ body{
 
 
 .my_orders{
+    padding: 2rem 0;
+}
+
+.my_orders__boxes{
     display: flex;
     width: 90vw;
     gap: 12px;
@@ -165,10 +184,11 @@ body{
     padding-bottom: 3rem;
     flex-grow: 1;
     margin-bottom: 2rem;
+
 }
 
-.my__orders_items__boxes .active{
-    border-color: red;
+.my__orders_items__boxes.active{
+    border: 1px solid red;
 }
 
 .my__orders_items__boxes_icon{
@@ -191,7 +211,6 @@ body{
 
 .my__orders_items__boxes{
     display: flex;
-;
     align-items: center;
     gap: 1.5rem;
     min-width: 140px;
@@ -236,6 +255,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    /* padding: 1rem;
+    margin: 0 1rem; */
 }
 
 .my__orders_loading_items .item-one{
@@ -249,9 +270,9 @@ body{
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.my__orders_loading_items .box-color{
-    display: flex
-;
+.my__orders_loading_items.box-color{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -268,12 +289,13 @@ body{
 .my__orders_loading_items .details-orders{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    font-weight: 600;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #f0f0f0;
+    padding-bottom: 1.5rem;
 }
 
-.my__orders_loading_items .price{
+.my__orders_loading_items.price{
+    display: inline-block;
     flex-grow: 1;
     align-self: flex-end;
 }
@@ -338,12 +360,57 @@ body{
     display: flex;
     flex-direction: row;
 }
+.my__orders_loading_items .item-two{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
 
 
 @media screen and (min-width: 768px) {
     .main{
         display: flex;
-        gap: 3rem;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 100% 1fr;
+        padding: 2rem;
+    }
+
+    .sidebar {
+        max-width:  20%;
+        height: 70%;
+    }
+
+    .my_orders {
+        width: 80%;
+        height: auto;
+        margin-right: 4rem;
+        grid-column: 2 / 4;
+    }
+
+    .my__orders_title{
+        display: none;
+    }
+    .my_orders__boxes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .my__orders_loading_items .details-orders{
+        flex-direction: row;
+        align-items: center;
+    }
+    .my__orders_loading_items.date_code{
+        flex-direction: row;
+        align-items: center;
+    }
+    .my__orders_loading_items.price{
+        flex-grow: 0;
     }
     
 }
